@@ -75,8 +75,6 @@ $(document).ready(function(){
         collapsed: false
     }).addTo(map);
 
-    layerControl.addOverlay(ov)
-
     drawLayer({
         url: "data/task.geojson",
         layerStyles: config["layer-styles"]["task"],
