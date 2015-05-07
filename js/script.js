@@ -29,9 +29,10 @@ function drawLayer(options){
     	url: options.url,
     	success: function(data){
     		data = JSON.parse(data);
-    		var fc = $.extend(true, {}, data);
-    		fc.feature = [];
+    		
     		if(options.filter){
+    			var fc = $.extend(true, {}, data);
+    			fc.feature = [];
 				$.map(data.feature,function(feature, index){
 
 					if (feature.properties.state>=2){
@@ -39,9 +40,10 @@ function drawLayer(options){
 					}
 
 				});
+				data = fc;
 			}
 
-			data = fc;
+			
 
 
     		var geojsonLayer = L.geoJson(data);
@@ -81,7 +83,8 @@ $(document).ready(function(){
     	url: "data/task.geojson",
     	layerStyles: config["layer-styles"]["task"],
     	layerName: "Mapped Areas",
-    	layerControl: layerControl
+    	layerControl: layerControl,
+    	filter: true
     });
 
     
