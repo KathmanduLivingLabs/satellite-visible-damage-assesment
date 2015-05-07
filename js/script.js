@@ -49,6 +49,7 @@ function drawLayer(options){
 
     		var geojsonLayer = L.geoJson(data);
     		geojsonLayer.setStyle(options.layerStyles);
+            geojsonLayer.addTo(options.map);
     		options.overlay.addLayer(geojsonLayer);
     	},
     	dataType: "json"
@@ -80,21 +81,24 @@ $(document).ready(function(){
         layerStyles: config["layer-styles"]["task"],
         layerName: "Mapped Areas",
         overlay: overlays["Mapped Areas"],
-        filter: true
+        filter: true,
+        map: map
     });
 
     drawLayer({
     	url: "data/idp-camp.geojson",
     	layerStyles: config["layer-styles"]["idp-camp"],
     	layerName: "IDP Camps",
-    	overlay: overlays["IDP Camps"]
+    	overlay: overlays["IDP Camps"],
+        map: map
     });
 
     drawLayer({
     	url: "data/rubble.geojson",
     	layerStyles: config["layer-styles"]["rubble"],
     	layerName: "Rubble",
-    	overlay: overlays["Rubble"]
+    	overlay: overlays["Rubble"],
+        map: map
     });
 
     
