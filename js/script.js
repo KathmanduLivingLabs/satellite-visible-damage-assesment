@@ -3,11 +3,27 @@ config={
 		"idp-camp": {
 			fillColor: "#ff9966",
 			fillOpacity: 0.8,
+			color: "#66ffcc",
+			weight: 1
+		},
+		"rubble": {
+			fillColor: "#ff9966",
+			fillOpacity: 0.8,
 			color: "#ff9966",
 			weight: 1
 		}
 	}
 };
+
+function drawLayer(options){
+	$.ajax({
+    	url: options.url,
+    	success: function(data){
+    		var geojsonLayer = L.geoJson(data);
+    		geojsonLayer.setStyle(options.layerStyles);
+    		layerControl.addOverlay(geojsonLayer, options.layerName);
+    });
+}
 
 
 $(document).ready(function(){
@@ -21,14 +37,17 @@ $(document).ready(function(){
     	collapsed: false
     }).addTo(map);
 
-    $.ajax({
+    drawLayer({
     	url: "data/idp-camp.geojson",
-    	success: function(data){
-    		var geojsonLayer = L.geoJson(data);
-    		geojsonLayer.setStyle(config["layer-styles"]["idp-camp"]);
-    		layerControl.addOverlay({
-    			"IDP Camp":geojsonLayer
-    		});
-    	}
-    })
+    	layerStyles: config["layer-styles"]["idp-camp"],
+    	layerName: "IDP Camps"
+    });
+
+    drawLayer({
+    	url: "data/rubble.geojson",
+    	layerStyles: config["layer-styles"]["idp-camp"],
+    	layerName: "Rubble"
+    });
+
+    
 });
