@@ -16,7 +16,8 @@ config={
 			fillColor: "#cccccc",
 			fillOpacity: 0,
 			color: "#ff9966",
-			weight: 5
+			weight: 1,
+			opacity: 1
 		}
 	}
 };
