@@ -4,13 +4,13 @@ config={
 			fillColor: "#66ffcc",
 			fillOpacity: 0.8,
 			color: "#66ffcc",
-			weight: 1
+			weight: 6
 		},
 		"rubble": {
 			fillColor: "#ff9966",
 			fillOpacity: 0.8,
 			color: "#ff9966",
-			weight: 1
+			weight: 6
 		},
 		"task": {
 			fillColor: "#cccccc",
