@@ -30,7 +30,7 @@ function drawLayer(options){
     	success: function(data){    		
     		if(options.filter){
     			var fc = $.extend(true, {}, data);
-    			fc.feature = [];
+    			fc.features = [];
 				$.map(data.feature,function(feature, index){
 
 					if (feature.properties.state>=2){
