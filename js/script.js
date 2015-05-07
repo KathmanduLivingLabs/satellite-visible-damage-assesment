@@ -1,7 +1,7 @@
 config={
 	"layer-styles": {
 		"idp-camp": {
-			fillColor: "#ff9966",
+			fillColor: "#66ffcc",
 			fillOpacity: 0.8,
 			color: "#66ffcc",
 			weight: 1
@@ -47,7 +47,7 @@ $(document).ready(function(){
 
     drawLayer({
     	url: "data/rubble.geojson",
-    	layerStyles: config["layer-styles"]["idp-camp"],
+    	layerStyles: config["layer-styles"]["rubble"],
     	layerName: "Rubble",
     	layerControl: layerControl
     });
