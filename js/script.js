@@ -1,8 +1,8 @@
 config={
 	"layer-styles": {
 		"idp-camp": {
-			fillColor: "#ffaa99",
-			fillOpacity: 0.6,
+			fillColor: "#ff9966",
+			fillOpacity: 0.8,
 			color: "#cccccc"
 		}
 	}
