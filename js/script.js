@@ -4,7 +4,7 @@ config={
 			fillColor: "#ff9966",
 			fillOpacity: 0.8,
 			color: "#ff9966",
-			width: 0.1
+			weight: 1
 		}
 	}
 };
@@ -26,7 +26,9 @@ $(document).ready(function(){
     	success: function(data){
     		var geojsonLayer = L.geoJson(data);
     		geojsonLayer.setStyle(config["layer-styles"]["idp-camp"]);
-    		layerControl.addOverlay(geojsonLayer);
+    		layerControl.addOverlay({
+    			"IDP Camp":geojsonLayer
+    		});
     	}
     })
 });
