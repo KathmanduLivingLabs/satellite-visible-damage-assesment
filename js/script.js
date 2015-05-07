@@ -50,7 +50,7 @@ function drawLayer(options){
     		var geojsonLayer = L.geoJson(data);
     		geojsonLayer.setStyle(options.layerStyles);
             geojsonLayer.addTo(options.map);
-    		options.overlay.addLayer(geojsonLayer);
+    		// options.overlay.addLayer(geojsonLayer);
     	},
     	dataType: "json"
     });
@@ -72,9 +72,9 @@ $(document).ready(function(){
         "Mapped Areas": L.featureGroup()
     }
 
-    var layerControl = L.control.layers({},overlays,{
-        collapsed: false
-    }).addTo(map);
+    // var layerControl = L.control.layers({},overlays,{
+    //     collapsed: false
+    // }).addTo(map);
 
     drawLayer({
         url: "data/task.geojson",
