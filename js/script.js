@@ -49,7 +49,7 @@ function drawLayer(options){
 
     		var geojsonLayer = L.geoJson(data);
     		geojsonLayer.setStyle(options.layerStyles);
-    		options.layerControl.addOverlay(geojsonLayer, options.layerName);
+    		options.overlay.addLayer(geojsonLayer);
     	},
     	dataType: "json"
     });
@@ -63,15 +63,25 @@ $(document).ready(function(){
         layers: [L.tileLayer("https://{s}.tiles.mapbox.com/v4/kll.m410hgod/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoia2xsIiwiYSI6IktVRUtfQnMifQ.GJAHJPvusgK_f0NsSXS8QA")]
     });
 
-    var layerControl = L.control.layers({},{},{
-    	collapsed: false
+    
+
+    var overlays = {
+        "IDP Camps": L.featureGroup(),
+        "Rubble": L.featureGroup(),
+        "Mapped Areas": L.featureGroup()
+    }
+
+    var layerControl = L.control.layers({},overlays,{
+        collapsed: false
     }).addTo(map);
+
+    layerControl.addOverlay(ov)
 
     drawLayer({
         url: "data/task.geojson",
         layerStyles: config["layer-styles"]["task"],
         layerName: "Mapped Areas",
-        layerControl: layerControl,
+        overlay: overlays["Mapped Areas"],
         filter: true
     });
 
@@ -79,14 +89,14 @@ $(document).ready(function(){
     	url: "data/idp-camp.geojson",
     	layerStyles: config["layer-styles"]["idp-camp"],
     	layerName: "IDP Camps",
-    	layerControl: layerControl
+    	overlay: overlays["IDP Camps"]
     });
 
     drawLayer({
     	url: "data/rubble.geojson",
     	layerStyles: config["layer-styles"]["rubble"],
     	layerName: "Rubble",
-    	layerControl: layerControl
+    	overlay: overlays["Rubble"]
     });
 
     
