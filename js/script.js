@@ -3,7 +3,8 @@ config={
 		"idp-camp": {
 			fillColor: "#ff9966",
 			fillOpacity: 0.8,
-			color: "#cccccc"
+			color: "#cccccc",
+			width: 0.1
 		}
 	}
 };
