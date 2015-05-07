@@ -29,8 +29,10 @@ function drawLayer(options){
     	url: options.url,
     	success: function(data){    		
     		if(options.filter){
-    			var fc = $.extend(true, {}, data);
-    			fc.features = [];
+    			var fc = {
+    				type: "FeatureCollection",
+    				features: []
+    			}
 				$.map(data.feature,function(feature, index){
 
 					if (feature.properties.state>=2){
