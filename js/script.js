@@ -16,7 +16,9 @@ $(document).ready(function(){
         layers: [L.tileLayer("https://{s}.tiles.mapbox.com/v4/kll.m410hgod/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoia2xsIiwiYSI6IktVRUtfQnMifQ.GJAHJPvusgK_f0NsSXS8QA")]
     });
 
-    var layerControl = L.control.layers().addTo(map);
+    var layerControl = L.control.layers({},{},{
+    	collapsed: false
+    }).addTo(map);
 
     $.ajax({
     	url: "data/idp-camp.geojson",
