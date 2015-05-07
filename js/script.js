@@ -68,6 +68,14 @@ $(document).ready(function(){
     }).addTo(map);
 
     drawLayer({
+        url: "data/task.geojson",
+        layerStyles: config["layer-styles"]["task"],
+        layerName: "Mapped Areas",
+        layerControl: layerControl,
+        filter: true
+    });
+
+    drawLayer({
     	url: "data/idp-camp.geojson",
     	layerStyles: config["layer-styles"]["idp-camp"],
     	layerName: "IDP Camps",
@@ -81,13 +89,7 @@ $(document).ready(function(){
     	layerControl: layerControl
     });
 
-    drawLayer({
-    	url: "data/task.geojson",
-    	layerStyles: config["layer-styles"]["task"],
-    	layerName: "Mapped Areas",
-    	layerControl: layerControl,
-    	filter: true
-    });
+    
 
     
 });
