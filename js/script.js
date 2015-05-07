@@ -21,7 +21,7 @@ function drawLayer(options){
     	success: function(data){
     		var geojsonLayer = L.geoJson(data);
     		geojsonLayer.setStyle(options.layerStyles);
-    		layerControl.addOverlay(geojsonLayer, options.layerName);
+    		options.layerControl.addOverlay(geojsonLayer, options.layerName);
     	}
     });
 }
@@ -41,13 +41,15 @@ $(document).ready(function(){
     drawLayer({
     	url: "data/idp-camp.geojson",
     	layerStyles: config["layer-styles"]["idp-camp"],
-    	layerName: "IDP Camps"
+    	layerName: "IDP Camps",
+    	layerControl: layerControl
     });
 
     drawLayer({
     	url: "data/rubble.geojson",
     	layerStyles: config["layer-styles"]["idp-camp"],
-    	layerName: "Rubble"
+    	layerName: "Rubble",
+    	layerControl: layerControl
     });
 
     
