@@ -13,6 +13,18 @@ config={
 			weight: 6
 		},
         "task":{
+            "-1":{
+                fillOpacity: 0,
+                opacity: 0
+            },
+            "0":{
+                fillOpacity: 0,
+                opacity: 0
+            },
+            "1":{
+                fillOpacity: 0,
+                opacity: 0
+            },
             "2":{
                 fillColor: "#22aa88",
                 fillOpacity: 0.2,
@@ -42,7 +54,7 @@ function drawLayer(options){
 
     		var geojsonLayer = L.geoJson(data, {
                 onEachFeature: function(feature, layer){
-                    layer.setStyle(config["layer-styles"]["task"]["state"]);
+                    layer.setStyle(config["layer-styles"]["task"][feature.properties.state]);
                 }
             });
     		geojsonLayer.setStyle(options.layerStyles);
