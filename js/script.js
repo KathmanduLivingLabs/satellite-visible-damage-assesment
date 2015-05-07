@@ -33,7 +33,7 @@ function drawLayer(options){
     				type: "FeatureCollection",
     				features: []
     			}
-				$.map(data.feature,function(feature, index){
+				$.map(data.features,function(feature, index){
 
 					if (feature.properties.state>=2){
 						fc.feature.push(feature);
