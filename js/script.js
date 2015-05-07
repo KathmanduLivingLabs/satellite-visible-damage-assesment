@@ -36,7 +36,7 @@ function drawLayer(options){
 				$.map(data.features,function(feature, index){
 
 					if (feature.properties.state>=2){
-						fc.feature.push(feature);
+						fc.features.push(feature);
 					}
 
 				});
