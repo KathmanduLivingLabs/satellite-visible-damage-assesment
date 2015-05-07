@@ -12,13 +12,22 @@ config={
 			color: "#aa6633",
 			weight: 6
 		},
-		"task": {
-			fillColor: "#cccccc",
-			fillOpacity: 0,
-			color: "#ff9966",
-			weight: 1,
-			opacity: 1
-		}
+        "task":{
+            "2":{
+                fillColor: "#22aa88",
+                fillOpacity: 0.2,
+                color: "#22aa88",
+                weight: 1,
+                opacity: 1
+            },
+            "3":{
+                fillColor: "#22aa00",
+                fillOpacity: 0.2,
+                color: "#22aa00",
+                weight: 1,
+                opacity: 1
+            }
+        }
 	}
 };
 
@@ -28,26 +37,14 @@ function drawLayer(options){
 
 	$.ajax({
     	url: options.url,
-    	success: function(data){    		
-    		if(options.filter){
-    			var fc = {
-    				type: "FeatureCollection",
-    				features: []
-    			}
-				$.map(data.features,function(feature, index){
-
-					if (feature.properties.state>=2){
-						fc.features.push(feature);
-					}
-
-				});
-				data = fc;
-			}
-
-			
+    	success: function(data){    				
 
 
-    		var geojsonLayer = L.geoJson(data);
+    		var geojsonLayer = L.geoJson(data, {
+                onEachFeature: function(feature, layer){
+                    layer.setStyle(config["layer-styles"]["task"]["state"]);
+                }
+            });
     		geojsonLayer.setStyle(options.layerStyles);
             geojsonLayer.addTo(options.map);
     		// options.overlay.addLayer(geojsonLayer);
