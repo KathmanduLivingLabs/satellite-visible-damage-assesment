@@ -22,6 +22,7 @@ function drawLayer(options){
     		var geojsonLayer = L.geoJson(data);
     		geojsonLayer.setStyle(options.layerStyles);
     		layerControl.addOverlay(geojsonLayer, options.layerName);
+    	}
     });
 }
 
