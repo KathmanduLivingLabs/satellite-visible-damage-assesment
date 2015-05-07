@@ -27,9 +27,7 @@ function drawLayer(options){
 
 	$.ajax({
     	url: options.url,
-    	success: function(data){
-    		data = JSON.parse(data);
-    		
+    	success: function(data){    		
     		if(options.filter){
     			var fc = $.extend(true, {}, data);
     			fc.feature = [];
@@ -49,7 +47,8 @@ function drawLayer(options){
     		var geojsonLayer = L.geoJson(data);
     		geojsonLayer.setStyle(options.layerStyles);
     		options.layerControl.addOverlay(geojsonLayer, options.layerName);
-    	}
+    	},
+    	dataType: "json"
     });
 }
 
