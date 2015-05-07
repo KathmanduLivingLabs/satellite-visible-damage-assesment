@@ -23,7 +23,8 @@ $(document).ready(function(){
     $.ajax({
     	url: "data/idp-camp.geojson",
     	success: function(data){
-    		var geojsonLayer = L.geoJson(data).setStyle(config["layer-styles"]["idp-camp"]);
+    		var geojsonLayer = L.geoJson(data);
+    		geojsonLayer.setStyle(config["layer-styles"]["idp-camp"]);
     		layerControl.addOverlay(geojsonLayer);
     	}
     })
