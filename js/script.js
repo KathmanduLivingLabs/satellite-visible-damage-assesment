@@ -3,13 +3,13 @@ config={
 		"idp-camp": {
 			fillColor: "#66ffcc",
 			fillOpacity: 0.8,
-			color: "#66ffcc",
+			color: "#66ccff",
 			weight: 6
 		},
 		"rubble": {
-			fillColor: "#ff9966",
+			fillColor: "#aa6633",
 			fillOpacity: 0.8,
-			color: "#ff9966",
+			color: "#aa6633",
 			weight: 6
 		},
 		"task": {
