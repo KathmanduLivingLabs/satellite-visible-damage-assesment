@@ -15,15 +15,18 @@ config={
         "task":{
             "-1":{
                 fillOpacity: 0,
-                opacity: 0
+                opacity: 0,
+                clicka: false
             },
             "0":{
                 fillOpacity: 0,
-                opacity: 0
+                opacity: 0,
+                clickable: false
             },
             "1":{
                 fillOpacity: 0,
-                opacity: 0
+                opacity: 0,
+                clickable: false
             },
             "2":{
                 fillColor: "#9BC1A9",
@@ -60,6 +63,13 @@ function drawLayer(options){
     		var geojsonLayer = L.geoJson(data, {
                 onEachFeature: function(feature, layer){
                     layer.setStyle(config["layer-styles"]["task"][feature.properties.state]);
+                    layer.on("click", function(e){
+                        options.map.setView(function(){
+                            var tileCenter = layer.getBounds().getCenter();
+                            tileCenter.lat -= 0.015;
+                            return tileCenter;
+                                                      }(), 12);
+                    });
                 }
             });
     		geojsonLayer.setStyle(options.layerStyles);
@@ -140,6 +150,8 @@ $(document).ready(function(){
     	
     	return container
     }().appendTo(".map-title");
+    
+    $("<a href='.' target='_blank' class='btn-maximize'/>").appendTo("body");
 
 
     

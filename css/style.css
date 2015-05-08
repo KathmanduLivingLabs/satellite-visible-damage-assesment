@@ -74,15 +74,41 @@ div.legend-row{
 	position: absolute;
 }
 
+.leaflet-control-zoom a{
+    border-radius: 0px !important;
+    background-color: rgba(255,255,255,0.6);
+}
+.leaflet-bar{
+    box-shadow: initial;
+}
+
+.btn-maximize{
+    display: none;
+}
+
 @media (max-width: 720px){
     #map{
-        height: 860px;
+        height: 640px;
+        overflow: visible;
     }
     .map-title{
+/*        position: absolute;*/
+        width: 100%;
+/*        right: 0px;*/
+/*        bottom: 0px;*/
+/*        top: auto;*/
+        position: relative;
+        margin-top: -122px;
+    }
+    .btn-maximize{
+        display: inline-block;
         position: absolute;
-        width: auto;
-        right: 0px;
-        bottom: 0px;
-        top: auto;
+        top: 76px;
+        left: 14px;
+        width: 36px;
+        height: 36px;
+        background-image: url('../img/btn-maximize.png');
+        background-size: 36px;
+        background-color: rgba(255,255,255,0.6);
     }
 }
