@@ -1,3 +1,33 @@
 #map{
 	height: 500px;
 }
+
+.legend-box{
+	position: absolute;
+	display: inline-block;
+}
+.legend-box div{
+	display: inline-block;
+}
+
+.legend-icon{
+	width: 28px;
+	height: 28px;
+}
+
+.legend-box .idp-camps .legend-icon{
+	background-color: #074803;
+}
+.legend-box .visible-damage .legend-icon{
+	background-color: #AA2300;
+}
+.legend-box .mapped-areas .legend-icon{
+	background-color: #9BC1A9;
+}
+.legend-box .validated-areas .legend-icon{
+	background-color: #22AA00;
+}
+
+.legend-box .legend-label{
+	font-size: 10pt;
+}
