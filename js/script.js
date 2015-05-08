@@ -30,8 +30,10 @@ config={
             },
             "2":{
                 fillColor: "#9BC1A9",
+                //fillColor: "#6faf93",
                 fillOpacity: 0.4,
-                color: "#22aa88",
+                color: "#9BC1A9",
+                //color: "#6faf93",
                 weight: 1,
                 opacity: 1
             },
