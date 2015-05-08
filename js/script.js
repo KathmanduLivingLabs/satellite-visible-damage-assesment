@@ -122,7 +122,7 @@ $(document).ready(function(){
     	container.append(new LegendRow({
     		"mapFeature": "IDP Camps"
     	}));
-    	container.append(new LegendRow({
+    	/*container.append(new LegendRow({
     		"mapFeature": "Visible Damage"
     	}));
     	container.append(new LegendRow({
@@ -130,7 +130,7 @@ $(document).ready(function(){
     	}));
     	container.append(new LegendRow({
     		"mapFeature": "Validated Areas"
-    	}));
+    	}));*/
     	
     	return container
     }().appendTo("body");
