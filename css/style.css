@@ -31,3 +31,11 @@
 .legend-box .legend-label{
 	font-size: 10pt;
 }
+
+.legend-row{
+	display: block;
+}
+
+.legend-box{
+	padding: 6px;
+}
