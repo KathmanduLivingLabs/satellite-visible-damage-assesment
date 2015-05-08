@@ -5,6 +5,8 @@
 .legend-box{
 	position: absolute;
 	display: inline-block;
+	top: 20px;
+	left: 20px;
 }
 .legend-box div{
 	display: inline-block;
