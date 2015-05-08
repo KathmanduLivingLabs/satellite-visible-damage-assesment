@@ -73,3 +73,16 @@ div.legend-row{
 	width: 430px;
 	position: absolute;
 }
+
+@media (max-width: 720px){
+    #map{
+        height: 860px;
+    }
+    .map-title{
+        position: absolute;
+        width: auto;
+        right: 0px;
+        bottom: 0px;
+        top: auto;
+    }
+}
