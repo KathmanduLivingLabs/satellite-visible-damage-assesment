@@ -109,6 +109,31 @@ $(document).ready(function(){
     	overlay: overlays["Rubble"],
         map: map
     });*/
+    
+    function LegendRow(options){
+    	var cssClass = options.mapFeature.toLowerCase().replace(/ /g,"-");
+    	return $("div").addClass("legend-row").append("<div class='legend-icon'></div><div class='legend-label'>"+options.mapFeature+"</div>").addClass(cssClass);
+    }
+    
+    var legend = function(){
+    	var container = $("div").addClass("legend-box");
+    	container.append(new LegendRow({
+    		"mapFeature": "IDP Camps"
+    	}));
+    	container.append(new LegendRow({
+    		"mapFeature": "Visible Damage"
+    	}));
+    	container.append(new LegendRow({
+    		"mapFeature": "Mapped Areas"
+    	}));
+    	container.append(new LegendRow({
+    		"mapFeature": "Validated Areas"
+    	}));
+    	
+    	return container
+    }().appendTo("body");
+    
+    $("div").addClass("map-title").text("Satellite-Visible Damage and IPD Camps");
 
     
 
