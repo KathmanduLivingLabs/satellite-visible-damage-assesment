@@ -45,7 +45,7 @@ config={
 
 function LegendRow(options){
     	var cssClass = options.mapFeature.toLowerCase().replace(/ /g,"-");
-    	return $("div").addClass("legend-row").append("<div class='legend-icon'></div><div class='legend-label'>"+options.mapFeature+"</div>").addClass(cssClass);
+    	return $("<div/>").addClass("legend-row").append("<div class='legend-icon'></div><div class='legend-label'>"+options.mapFeature+"</div>").addClass(cssClass);
     }
 
 function drawLayer(options){
@@ -118,7 +118,7 @@ $(document).ready(function(){
     
     
     var legend = function(){
-    	var container = $("div").addClass("legend-box");
+    	var container = $("<div/>").addClass("legend-box");
     	container.append(new LegendRow({
     		"mapFeature": "IDP Camps"
     	}));
@@ -135,7 +135,7 @@ $(document).ready(function(){
     	return container
     }().appendTo("body");
     
-    $("div").addClass("map-title").text("Satellite-Visible Damage and IPD Camps");
+    $("<div/>").addClass("map-title").text("Satellite-Visible Damage and IPD Camps");
 
     
 
