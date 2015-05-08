@@ -94,7 +94,7 @@ $(document).ready(function(){
         map: map
     });
 
-    drawLayer({
+    /*drawLayer({
     	url: "data/idp-camp.geojson",
     	layerStyles: config["layer-styles"]["idp-camp"],
     	layerName: "IDP Camps",
@@ -108,7 +108,7 @@ $(document).ready(function(){
     	layerName: "Rubble",
     	overlay: overlays["Rubble"],
         map: map
-    });
+    });*/
 
     
 
