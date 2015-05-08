@@ -1,38 +1,56 @@
+body{
+    font-family: "Lato", "Verdana", sans-serif;
+}
+
 #map{
-	height: 500px;
+	height: 610px;
 }
 
 .legend-box{
-	position: absolute;
+/*	position: absolute;*/
 	display: inline-block;
-	top: 20px;
-	right: 20px;
+/*	top: 20px;*/
+/*	right: 20px;*/
 }
 .legend-box div{
 	display: inline-block;
 }
 
 .legend-icon{
-	width: 28px;
-	height: 28px;
+	width: 18px;
+	height: 18px;
+    margin-top:3px;
+    vertical-align: text-top;
+    display: inline-block;
 }
 
-.legend-box .idp-camps .legend-icon{
+.legend-box .idp-camps .legend-icon,.idp-camps.legend-icon{
 	background-color: #074803;
 }
-.legend-box .visible-damage .legend-icon{
+.legend-box .visible-damage .legend-icon,.visible-damage.legend-icon{
 	background-color: #AA2300;
 }
-.legend-box .mapped-areas .legend-icon{
+.legend-box .mapped-areas .legend-icon,.mapped-areas.legend-icon{
 	background-color: #9BC1A9;
 }
-.legend-box .validated-areas .legend-icon{
+.legend-box .validated-areas .legend-icon,.validated-areas.legend-icon{
 	background-color: #22AA00;
+}
+.idp-camps.legend-icon,.visible-damage.legend-icon,.mapped-areas.legend-icon,.validated-areas.legend-icon{
+    margin-top:0px;
 }
 
 .legend-box .legend-label{
 	font-size: 10pt;
 	line-height: 28px;
+    margin-left: 4px;
+}
+p{
+    font-size: 10pt;
+    line-height: 16pt;
+}
+h4{
+    line-height: .4em;
 }
 
 div.legend-row{
@@ -41,7 +59,7 @@ div.legend-row{
 
 .legend-box{
 	padding: 6px;
-	background-color: rgba(255,255,255,0.6);
+/*	background-color: rgba(255,255,255,0.6);*/
 }
 
 .map-title{
@@ -49,9 +67,9 @@ div.legend-row{
 	padding: 6px;
 	background-color: rgba(255,255,255,0.6);
 	top: 4px;
-	left: 50%;
-	margin-left: 90px;
-	width: 240px;
+/*	left: 50%;*/
+/*	margin-left: 90px;*/
+    right: 4px;
+	width: 430px;
 	position: absolute;
-	
 }

@@ -1,15 +1,15 @@
 config={
 	"layer-styles": {
 		"idp-camp": {
-			fillColor: "#66ffcc",
+			fillColor: "#074803",
 			fillOpacity: 0.8,
-			color: "#66ccff",
+			color: "#074803",
 			weight: 6
 		},
 		"rubble": {
-			fillColor: "#aa6633",
+			fillColor: "#AA2300",
 			fillOpacity: 0.8,
-			color: "#aa6633",
+			color: "#AA2300",
 			weight: 6
 		},
         "task":{
@@ -26,16 +26,16 @@ config={
                 opacity: 0
             },
             "2":{
-                fillColor: "#22aa88",
-                fillOpacity: 0.2,
+                fillColor: "#9BC1A9",
+                fillOpacity: 0.4,
                 color: "#22aa88",
                 weight: 1,
                 opacity: 1
             },
             "3":{
                 fillColor: "#22aa00",
-                fillOpacity: 0.2,
-                color: "#22aa00",
+                fillOpacity: 0.4,
+                color: "#22AA00",
                 weight: 1,
                 opacity: 1
             }
@@ -74,9 +74,11 @@ function drawLayer(options){
 $(document).ready(function(){
     var map = L.map("map", {
         center: [27.8006, 85.3934],
-        zoom: 8,
+        zoom: 9,
         layers: [L.tileLayer("https://{s}.tiles.mapbox.com/v4/kll.11e42515/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoia2xsIiwiYSI6IktVRUtfQnMifQ.GJAHJPvusgK_f0NsSXS8QA")]
     });
+    
+    config.map=map;
 
     
 
@@ -117,6 +119,10 @@ $(document).ready(function(){
     
     
     
+    
+    
+    $("<div/>").addClass("map-title").html("<h4>Satellite-Visible Damage and IPD Camps<h4><p>Using Satellite Imagery, volunteers have mapped IDP Camps (<span class='legend-icon idp-camps'></span>) and Visible Damage (<span class='legend-icon visible-damage'></span>). Boxes overlaid indicates where mapping and validation has been done. IDP Camps and visinle damage outside mapped boxes indicate mapping in progress.</p>").appendTo("body");
+    
     var legend = function(){
     	var container = $("<div/>").addClass("legend-box");
     	container.append(new LegendRow({
@@ -133,11 +139,8 @@ $(document).ready(function(){
     	}));
     	
     	return container
-    }().appendTo("body");
-    
-    $("<div/>").addClass("map-title").text("Satellite-Visible Damage and IPD Camps").appendTo("body");
+    }().appendTo(".map-title");
 
-    
 
     
 });
