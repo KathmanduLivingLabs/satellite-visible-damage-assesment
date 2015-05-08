@@ -48,4 +48,9 @@ div.legend-row{
 	font-size: 14pt;
 	padding: 6px;
 	background-color: rgba(255,255,255,0.6);
+	top: 4px;
+	left: 50%;
+	margin-left: 90px;
+	width: 180px;
+	
 }
