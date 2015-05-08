@@ -51,6 +51,7 @@ div.legend-row{
 	top: 4px;
 	left: 50%;
 	margin-left: 90px;
-	width: 180px;
+	width: 240px;
+	position: absolute;
 	
 }
