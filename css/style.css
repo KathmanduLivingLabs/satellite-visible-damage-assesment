@@ -116,4 +116,7 @@ div.legend-row{
     .leaflet-bottom{
         bottom: -20px;
     }
+    .leaflet-right{
+        right: 14px;
+    }
 }
