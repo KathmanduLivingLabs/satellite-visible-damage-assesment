@@ -98,7 +98,9 @@ div.legend-row{
 /*        bottom: 0px;*/
 /*        top: auto;*/
         position: relative;
-        margin-top: -122px;
+/*        margin-top: -122px;*/
+        margin-top: -222px;
+        padding-bottom: 20px;
     }
     .btn-maximize{
         display: inline-block;
@@ -110,5 +112,8 @@ div.legend-row{
         background-image: url('../img/btn-maximize.png');
         background-size: 36px;
         background-color: rgba(255,255,255,0.6);
+    }
+    .leaflet-bottom{
+        bottom: -20px;
     }
 }
