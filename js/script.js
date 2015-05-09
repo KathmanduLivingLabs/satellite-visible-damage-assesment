@@ -133,7 +133,7 @@ $(document).ready(function(){
     
     
     
-    $("<div/>").addClass("map-title").html("<h4>Satellite-Visible Damage and IPD Camps<h4><p>Using Satellite Imagery, volunteers have mapped IDP Camps (<span class='legend-icon idp-camps'></span>) and Visible Damage (<span class='legend-icon visible-damage'></span>). Boxes overlaid indicates where mapping and validation has been done. IDP Camps and visinle damage outside mapped boxes indicate mapping in progress.</p>").appendTo("body");
+    $("<div/>").addClass("map-title").html("<h4>Satellite-Visible Damage and IPD Camps<h4><p>Using Satellite Imagery, volunteers have mapped IDP Camps (<span class='legend-icon idp-camps'></span>) and Visible Damage (<span class='legend-icon visible-damage'></span>). Boxes overlaid indicate where mapping and validation have been done. IDP Camps and visible damage outside mapped boxes indicate mapping in progress.</p>").appendTo("body");
     
     var legend = function(){
     	var container = $("<div/>").addClass("legend-box");

@@ -8,9 +8,12 @@ body{
 
 .legend-box{
 /*	position: absolute;*/
-	display: inline-block;
+	display: flex;
 /*	top: 20px;*/
 /*	right: 20px;*/
+    padding: 6px;
+    flex-flow: column wrap;
+    height: 56px;
 }
 .legend-box div{
 	display: inline-block;
@@ -48,18 +51,15 @@ body{
 p{
     font-size: 10pt;
     line-height: 16pt;
+    font-weight: 500;
 }
 h4{
     line-height: .4em;
+    font-weight: 500;
 }
 
 div.legend-row{
 	display: block;
-}
-
-.legend-box{
-	padding: 6px;
-/*	background-color: rgba(255,255,255,0.6);*/
 }
 
 .map-title{
