@@ -85,7 +85,7 @@ function drawLayer(options){
 
 $(document).ready(function(){
     var map = L.map("map", {
-        center: [27.8006, 85.3034],
+        center: [27.8006, 85.2334],
         zoom: 9,
         layers: [ L.tileLayer("https://{s}.tiles.mapbox.com/v4/kll.m4l44c1a/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoia2xsIiwiYSI6IktVRUtfQnMifQ.GJAHJPvusgK_f0NsSXS8QA"), L.tileLayer("https://{s}.tiles.mapbox.com/v4/kll.8fb56087/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoia2xsIiwiYSI6IktVRUtfQnMifQ.GJAHJPvusgK_f0NsSXS8QA",{
             attribution: "© OpenStreetMap Contributors | Satellite Imagery Dates: April 29, 2015 and May 3, 2015 | Data Updated: May 7, 2015"
