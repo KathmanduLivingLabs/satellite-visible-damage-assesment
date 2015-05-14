@@ -93,14 +93,15 @@ div.legend-row{
     }
     .map-title{
 /*        position: absolute;*/
-        width: 100%;
+        width: 100.6%;
+        left: -8px;
 /*        right: 0px;*/
 /*        bottom: 0px;*/
 /*        top: auto;*/
         position: relative;
 /*        margin-top: -122px;*/
         margin-top: -222px;
-        padding-bottom: 20px;
+        padding-bottom: 22px;
     }
     .btn-maximize{
         display: inline-block;
